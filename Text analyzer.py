@@ -115,3 +115,5 @@ for word in simple_words:
     if word.isdigit():
         summ += int(word)
 print(f'{border}\nIf we summed all the numbers in this text we would get: {summ}\n{border}')
+
+
