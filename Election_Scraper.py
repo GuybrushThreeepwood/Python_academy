@@ -88,7 +88,6 @@ def get_data(url):
 
     for table in tables:
 
-        # extract table rows and remove header
         municipal_rows = table.find_all("tr")[2:]
 
         for row in municipal_rows:
@@ -107,7 +106,6 @@ def get_data(url):
 
             municipal_url = BASE_URL + row.find("a")["href"]
 
-            # get code & name
             mun_tmp["code"] = row.find("a").text
             mun_tmp["name"] = row.a.findNext("td").text
 
